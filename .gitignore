@@ -1,0 +1,14 @@
+tools/node_modules/
+
+# Produto pago: o repositório é público, então o guia e as receitas não sobem.
+pdf/
+LEIA-ME.txt
+
+# Imagens de origem e materiais de trabalho (pesados ou fora do site)
+originais/
+fotos-originais/
+referencias/
+alternativas/
+mapa-de-arquivos.csv
+_placeholders-antigos/
+_fora-do-site/

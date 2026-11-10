@@ -1,0 +1,290 @@
+[
+  {
+    "arquivo": "pdf/img/capa-guia.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 166459
+  },
+  {
+    "arquivo": "pdf/img/hero-presepio.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 215510
+  },
+  {
+    "arquivo": "pdf/img/manjedoura.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 174140
+  },
+  {
+    "arquivo": "pdf/img/peca-01.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 185405
+  },
+  {
+    "arquivo": "pdf/img/peca-02.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 150698
+  },
+  {
+    "arquivo": "pdf/img/peca-03.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 159447
+  },
+  {
+    "arquivo": "pdf/img/peca-04.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 166490
+  },
+  {
+    "arquivo": "pdf/img/peca-05.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 163383
+  },
+  {
+    "arquivo": "pdf/img/peca-06.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 150103
+  },
+  {
+    "arquivo": "pdf/img/peca-07.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 149376
+  },
+  {
+    "arquivo": "pdf/img/peca-08.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 160868
+  },
+  {
+    "arquivo": "pdf/img/peca-09.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 136465
+  },
+  {
+    "arquivo": "pdf/img/peca-10.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 161838
+  },
+  {
+    "arquivo": "pdf/img/peca-11.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 160868
+  },
+  {
+    "arquivo": "pdf/img/peca-12.jpg",
+    "largura": 1080,
+    "altura": 1350,
+    "bytes": 232953
+  },
+  {
+    "arquivo": "public/img/capa-guia-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 42350
+  },
+  {
+    "arquivo": "public/img/capa-guia-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 123198
+  },
+  {
+    "arquivo": "public/img/hero-presepio-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 59300
+  },
+  {
+    "arquivo": "public/img/hero-presepio-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 209848
+  },
+  {
+    "arquivo": "public/img/manjedoura-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 45272
+  },
+  {
+    "arquivo": "public/img/manjedoura-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 142860
+  },
+  {
+    "arquivo": "public/img/mockup-capa-dura-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 42442
+  },
+  {
+    "arquivo": "public/img/mockup-capa-dura-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 137156
+  },
+  {
+    "arquivo": "public/img/og-image.jpg",
+    "largura": 1200,
+    "altura": 630,
+    "bytes": 70528
+  },
+  {
+    "arquivo": "public/img/peca-01-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 47094
+  },
+  {
+    "arquivo": "public/img/peca-01-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 171716
+  },
+  {
+    "arquivo": "public/img/peca-02-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 39532
+  },
+  {
+    "arquivo": "public/img/peca-02-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 116408
+  },
+  {
+    "arquivo": "public/img/peca-03-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 42498
+  },
+  {
+    "arquivo": "public/img/peca-03-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 128474
+  },
+  {
+    "arquivo": "public/img/peca-04-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 45422
+  },
+  {
+    "arquivo": "public/img/peca-04-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 130858
+  },
+  {
+    "arquivo": "public/img/peca-05-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 43180
+  },
+  {
+    "arquivo": "public/img/peca-05-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 136518
+  },
+  {
+    "arquivo": "public/img/peca-06-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 37544
+  },
+  {
+    "arquivo": "public/img/peca-06-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 123280
+  },
+  {
+    "arquivo": "public/img/peca-07-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 39542
+  },
+  {
+    "arquivo": "public/img/peca-07-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 114556
+  },
+  {
+    "arquivo": "public/img/peca-08-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 42424
+  },
+  {
+    "arquivo": "public/img/peca-08-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 130710
+  },
+  {
+    "arquivo": "public/img/peca-09-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 36078
+  },
+  {
+    "arquivo": "public/img/peca-09-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 103002
+  },
+  {
+    "arquivo": "public/img/peca-10-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 42350
+  },
+  {
+    "arquivo": "public/img/peca-10-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 135728
+  },
+  {
+    "arquivo": "public/img/peca-11-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 44866
+  },
+  {
+    "arquivo": "public/img/peca-11-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 135368
+  },
+  {
+    "arquivo": "public/img/peca-12-480.webp",
+    "largura": 480,
+    "altura": 600,
+    "bytes": 64514
+  },
+  {
+    "arquivo": "public/img/peca-12-960.webp",
+    "largura": 960,
+    "altura": 1200,
+    "bytes": 226556
+  }
+]

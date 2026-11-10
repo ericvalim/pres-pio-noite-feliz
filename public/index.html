@@ -4,325 +4,481 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presépio Noite Feliz · por Crochêtando</title>
-  <meta name="description" content="Guia digital com 12 peças de presépio em amigurumi, passo a passo com fotos. Faça o presépio da sua família com as suas mãos.">
+  <meta name="description" content="12 peças em amigurumi, da Sagrada Família aos Reis Magos, com receita carreira por carreira e fotos das etapas.">
   <meta name="theme-color" content="#1E4D3A">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Presépio Noite Feliz · por Crochêtando">
-  <meta property="og:description" content="Guia digital com 12 peças em amigurumi, passo a passo com fotos.">
-  <meta property="og:image" content="img/hero-presepio.webp">
+  <meta property="og:title" content="Neste Natal, o presépio da sua família vai ser feito pelas suas mãos.">
+  <meta property="og:description" content="12 peças em amigurumi, da Sagrada Família aos Reis Magos, com receita carreira por carreira e fotos das etapas.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <script>document.documentElement.classList.add('js');</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Nunito:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Nunito:wght@400;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" as="image" href="img/hero-presepio.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="img/mockup-capa-dura-960.webp"
+        imagesrcset="img/mockup-capa-dura-480.webp 480w, img/mockup-capa-dura-960.webp 960w"
+        imagesizes="(min-width: 900px) 480px, calc(100vw - 64px)" fetchpriority="high">
 
   <!-- META PIXEL -->
 </head>
 <body>
 
-  <!-- Ícones reutilizáveis: estrela de Belém (8 pontas) e fio de lã ondulado -->
+  <!-- Ícones reutilizáveis -->
   <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <symbol id="i-estrela" viewBox="0 0 24 24">
       <polygon fill="currentColor" points="12,0 13.72,7.84 20.49,3.51 16.16,10.28 24,12 16.16,13.72 20.49,20.49 13.72,16.16 12,24 10.28,16.16 3.51,20.49 7.84,13.72 0,12 7.84,10.28 3.51,3.51 10.28,7.84"/>
     </symbol>
-    <symbol id="i-fio" viewBox="0 0 96 24">
-      <path d="M2 12 Q 14 2 26 12 T 50 12 T 74 12 T 94 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="12" fill="#1E4D3A"/>
+      <path d="M7 12.4l3.3 3.3L17.2 8.8" fill="none" stroke="#C9A54C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24">
+      <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-fio" viewBox="0 0 240 24" preserveAspectRatio="none">
+      <path d="M2 12 Q17 2 32 12 T62 12 T92 12 T122 12 T152 12 T182 12 T212 12 T238 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-mais" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-fechar" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-cima" viewBox="0 0 24 24">
+      <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24">
+      <path d="M6 2.5h8l5 5v14H6zM14 2.5v5h5M9 13h7M9 17h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-email" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24">
+      <path d="M12 2.5l8 3v6.2c0 5-3.4 8.4-8 9.8-4.6-1.4-8-4.8-8-9.8V5.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M8.5 12l2.5 2.5 4.5-4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
   </svg>
+
+  <!-- Barra de progresso de leitura (desktop) -->
+  <div class="progresso" aria-hidden="true"><div class="progresso__barra"></div></div>
+
+  <!-- Barra fixa no topo -->
+  <header class="topo" id="topo">
+    <div class="topo__interno">
+      <a class="topo__logo" href="#inicio"><img src="img/logo-noite-feliz-linha-claro.svg" width="602" height="72" decoding="async" alt="Presépio Noite Feliz"></a>
+      <a class="btn btn--compacto topo__btn" href="#planos">QUERO O MEU<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+    </div>
+  </header>
 
   <main>
 
     <!-- 1. Hero -->
-    <header class="hero">
-      <div class="conteudo">
-        <a class="logo" href="./" aria-label="Presépio Noite Feliz, por Crochêtando">
-          <span class="logo__linha">
-            <svg class="estrela" width="22" height="22" aria-hidden="true"><use href="#i-estrela"/></svg>
-            <span class="logo__nome">Presépio Noite Feliz</span>
-            <svg class="estrela" width="22" height="22" aria-hidden="true"><use href="#i-estrela"/></svg>
-          </span>
-          <span class="logo__assinatura">por Crochêtando</span>
-        </a>
-
-        <h1 class="hero__titulo">Neste Natal, o presépio da sua família vai ser feito pelas suas mãos.</h1>
-        <p class="hero__subtitulo">Guia digital com 12 peças em amigurumi, passo a passo com fotos.</p>
-
-        <img class="hero__imagem" src="img/hero-presepio.webp" width="1200" height="900" fetchpriority="high"
-             alt="Presépio de crochê em amigurumi montado, com Menino Jesus na manjedoura, Maria, José, os três reis magos, anjo, pastor, animais e a estrela de Belém">
-
-        <a class="botao" href="#planos">Quero meu presépio</a>
+    <section class="painel hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="hero__texto">
+        <img class="hero__logo" src="img/logo-noite-feliz.svg" width="614" height="381" decoding="async" alt="Presépio Noite Feliz">
+        <p class="etiqueta">Guia digital de amigurumi · Natal 2026</p>
+        <h1 id="titulo-hero">Neste Natal, o presépio da sua família vai ser feito <span class="destaque">pelas suas mãos.</span></h1>
+        <p>12 peças em amigurumi, da Sagrada Família aos Reis Magos, com receita carreira por carreira e fotos das etapas.</p>
       </div>
-    </header>
 
-    <div class="divisor" aria-hidden="true">
-      <svg class="divisor__fio" width="96" height="24"><use href="#i-fio"/></svg>
-      <svg class="estrela" width="20" height="20"><use href="#i-estrela"/></svg>
-      <svg class="divisor__fio divisor__fio--espelho" width="96" height="24"><use href="#i-fio"/></svg>
-    </div>
+      <img class="hero__imagem" src="img/mockup-capa-dura-960.webp"
+           srcset="img/mockup-capa-dura-480.webp 480w, img/mockup-capa-dura-960.webp 960w"
+           sizes="(min-width: 900px) 480px, calc(100vw - 64px)"
+           width="960" height="1200" fetchpriority="high" decoding="async"
+           alt="Guia Presépio Noite Feliz em formato de livro">
 
-    <!-- 2. No seu ritmo -->
-    <section class="secao secao--areia" id="ritmo" aria-labelledby="titulo-ritmo">
-      <div class="conteudo">
-        <h2 id="titulo-ritmo">No seu ritmo</h2>
-        <p class="secao__intro">Sem pressa e sem complicação: o guia foi feito para você crochetar com calma, uma etapa de cada vez.</p>
-        <ul class="chips">
-          <li class="chip"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg>Uma peça por vez</li>
-          <li class="chip"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg>Fotos em cada etapa</li>
-          <li class="chip"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg>Pontos básicos explicados</li>
-          <li class="chip"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg>Lista de compras pronta</li>
-        </ul>
+      <div class="hero__acao acao">
+        <a class="btn" href="#planos">QUERO MEU PRESÉPIO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+        <p class="acao__nota">Guia em PDF · a partir de R$ 14,90</p>
       </div>
+    </section>
+
+    <!-- 2. Uma peça por vez -->
+    <section class="painel painel--areia centro" id="ritmo" aria-labelledby="titulo-ritmo">
+      <h2 id="titulo-ritmo" data-reveal>Uma peça por vez, <span class="destaque">sem pressa e sem complicação.</span></h2>
+      <ul class="linhas">
+        <li data-reveal style="--atraso: 0ms"><svg class="ico-estrela" width="26" height="26" aria-hidden="true"><use href="#i-estrela"/></svg><span>Só pontos básicos: anel mágico, correntinha, ponto baixo, ponto baixíssimo, aumento e diminuição.</span></li>
+        <li data-reveal style="--atraso: 120ms"><svg class="ico-estrela" width="26" height="26" aria-hidden="true"><use href="#i-estrela"/></svg><span>Foto em cada etapa importante.</span></li>
+        <li data-reveal style="--atraso: 240ms"><svg class="ico-estrela" width="26" height="26" aria-hidden="true"><use href="#i-estrela"/></svg><span>Lista de compras pronta antes de começar.</span></li>
+        <li data-reveal style="--atraso: 360ms"><svg class="ico-estrela" width="26" height="26" aria-hidden="true"><use href="#i-estrela"/></svg><span>Comece pelo Menino Jesus, a peça mais simples.</span></li>
+      </ul>
+      <p class="fecho" data-reveal>Peça por peça, o presépio fica pronto <span class="destaque">e volta pra sala todo Natal.</span></p>
     </section>
 
     <!-- 3. Comece pela Sagrada Família -->
-    <section class="secao" id="comece" aria-labelledby="titulo-comece">
-      <div class="conteudo">
-        <h2 id="titulo-comece">Comece pela Sagrada Família</h2>
-        <p class="secao__intro">Faça primeiro o coração do presépio. Quando quiser, complete a cena.</p>
-        <div class="cards">
-          <article class="card">
-            <img class="card__imagem" src="img/sagrada-familia.webp" width="800" height="600" loading="lazy"
-                 alt="Sagrada Família em amigurumi: Menino Jesus na manjedoura entre Maria e José">
-            <div class="card__corpo">
-              <span class="card__etiqueta">3 peças</span>
-              <h3>Sagrada Família</h3>
-              <p>Menino Jesus com manjedoura, Maria e José. Um começo perfeito para quem quer ver o presépio tomar forma.</p>
+    <section class="painel painel--verde centro" id="comece" aria-labelledby="titulo-comece">
+      <h2 id="titulo-comece" data-reveal>Comece pela Sagrada Família. <span class="destaque">Complete com os Reis, o Anjo e os animais.</span></h2>
+
+      <div class="cards">
+        <article class="card-produto" data-reveal>
+            <div class="moldura moldura--grade">
+              <img src="img/peca-02-480.webp"
+                   srcset="img/peca-02-480.webp 480w, img/peca-02-960.webp 960w"
+                   sizes="(min-width: 1180px) 245px, (min-width: 768px) calc(25vw - 55px), calc(50vw - 45px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Maria em amigurumi">
+              <img src="img/peca-03-480.webp"
+                   srcset="img/peca-03-480.webp 480w, img/peca-03-960.webp 960w"
+                   sizes="(min-width: 1180px) 245px, (min-width: 768px) calc(25vw - 55px), calc(50vw - 45px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="José em amigurumi">
+              <img src="img/peca-01-480.webp"
+                   srcset="img/peca-01-480.webp 480w, img/peca-01-960.webp 960w"
+                   sizes="(min-width: 1180px) 245px, (min-width: 768px) calc(25vw - 55px), calc(50vw - 45px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Menino Jesus em amigurumi">
+              <img src="img/manjedoura-480.webp"
+                   srcset="img/manjedoura-480.webp 480w, img/manjedoura-960.webp 960w"
+                   sizes="(min-width: 1180px) 245px, (min-width: 768px) calc(25vw - 55px), calc(50vw - 45px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Manjedoura em amigurumi">
             </div>
-          </article>
-          <article class="card">
-            <img class="card__imagem" src="img/presepio-completo.webp" width="800" height="600" loading="lazy"
-                 alt="Presépio Completo em amigurumi com as 12 peças arrumadas lado a lado">
-            <div class="card__corpo">
-              <span class="card__etiqueta">12 peças</span>
-              <h3>Presépio Completo</h3>
-              <p>A Sagrada Família, os três reis magos, anjo, pastor, ovelha, boi, burrinho e a estrela de Belém.</p>
-            </div>
-          </article>
-        </div>
+          <div class="card-produto__corpo">
+            <span class="card-produto__qtd">3 peças</span>
+            <h3>Sagrada Família</h3>
+            <p>Menino Jesus com manjedoura, Maria e José.</p>
+          </div>
+        </article>
+        <article class="card-produto" data-reveal style="--atraso: 120ms">
+          <div class="moldura">
+            <img src="img/hero-presepio-480.webp"
+                 srcset="img/hero-presepio-480.webp 480w, img/hero-presepio-960.webp 960w"
+                 sizes="(min-width: 1180px) 495px, (min-width: 768px) calc(50vw - 110px), calc(100vw - 84px)"
+                 width="480" height="600" loading="lazy" decoding="async"
+                 alt="Presépio completo em amigurumi com as 12 peças">
+          </div>
+          <div class="card-produto__corpo">
+            <span class="card-produto__qtd">12 peças</span>
+            <h3>Presépio Completo</h3>
+            <p>A Sagrada Família, os 3 Reis Magos, o Anjo, o Pastor, os animais e a Estrela de Belém.</p>
+          </div>
+        </article>
+      </div>
+      <p class="aviso-ilustrativo">Imagens ilustrativas.</p>
+
+      <p class="texto-curto" style="margin-top: 28px">Você escolhe por onde começar e completa o presépio no seu tempo.</p>
+      <div class="acao">
+        <a class="btn" href="#planos">QUERO MEU PRESÉPIO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
       </div>
     </section>
 
     <div class="divisor" aria-hidden="true">
-      <svg class="divisor__fio" width="96" height="24"><use href="#i-fio"/></svg>
-      <svg class="estrela" width="20" height="20"><use href="#i-estrela"/></svg>
-      <svg class="divisor__fio divisor__fio--espelho" width="96" height="24"><use href="#i-fio"/></svg>
+      <svg class="divisor__fio"><use href="#i-fio"/></svg>
+      <span class="selo"><svg width="34" height="34"><use href="#i-estrela"/></svg></span>
+      <svg class="divisor__fio divisor__fio--espelho"><use href="#i-fio"/></svg>
     </div>
 
     <!-- 4. Como funciona o guia -->
-    <section class="secao secao--areia" id="como-funciona" aria-labelledby="titulo-como">
-      <div class="conteudo">
-        <h2 id="titulo-como">Como funciona o guia</h2>
-        <ol class="passos">
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">1</span>
-            <div>
-              <span class="passo__titulo">Escolha a peça</span>
-              <p>Comece pela que mais mexe com você. Cada peça tem o seu próprio passo a passo.</p>
+    <section class="painel" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="duas-colunas">
+        <div>
+          <h2 id="titulo-como" data-reveal>É assim que <span class="destaque">o guia funciona:</span></h2>
+          <ul class="itens">
+            <li data-reveal><svg class="ico-check" width="32" height="32" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Escolha a peça</strong>Cada peça tem foto pronta, tamanho final e materiais.</span></li>
+            <li data-reveal style="--atraso: 120ms"><svg class="ico-check" width="32" height="32" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Separe os fios</strong>A lista de compras mostra cor, fio e agulha de tudo.</span></li>
+            <li data-reveal style="--atraso: 240ms"><svg class="ico-check" width="32" height="32" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Siga carreira por carreira</strong>Com o total de pontos no fim de cada carreira e fotos das etapas.</span></li>
+            <li data-reveal style="--atraso: 360ms"><svg class="ico-check" width="32" height="32" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Monte a cena</strong>O guia mostra como dispor as peças e fazer uma base simples.</span></li>
+          </ul>
+        </div>
+        <img class="capa-guia" src="img/capa-guia-480.webp" data-reveal
+             srcset="img/capa-guia-480.webp 480w, img/capa-guia-960.webp 960w"
+             sizes="(min-width: 900px) 420px, (min-width: 484px) 420px, calc(100vw - 64px)"
+             width="480" height="600" loading="lazy" decoding="async"
+             alt="Capa do guia Presépio Noite Feliz">
+      </div>
+      <p class="fecho" data-reveal>Mais do que um enfeite: <span class="destaque">um presépio feito por você, pra ficar na família.</span></p>
+    </section>
+
+    <!-- 5. Bloco fixo -->
+    <section class="painel painel--areia" id="ganhando-forma" aria-labelledby="titulo-forma">
+      <div class="fixo">
+        <div class="fixo__esq">
+          <h2 id="titulo-forma">Seu presépio vai ganhando forma <span class="destaque">peça por peça.</span></h2>
+          <p>Uma peça hoje, outra amanhã. O guia fica no seu celular pra abrir quando quiser, e dá pra imprimir.</p>
+          <div class="acao">
+            <a class="btn" href="#planos">QUERO MEU PRESÉPIO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+          </div>
+        </div>
+        <div class="fixo__dir">
+          <figure class="etapa" data-reveal>
+            <div class="moldura moldura--grade">
+              <img src="img/peca-02-480.webp"
+                   srcset="img/peca-02-480.webp 480w, img/peca-02-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Maria em amigurumi">
+              <img src="img/peca-03-480.webp"
+                   srcset="img/peca-03-480.webp 480w, img/peca-03-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="José em amigurumi">
+              <img src="img/peca-01-480.webp"
+                   srcset="img/peca-01-480.webp 480w, img/peca-01-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Menino Jesus em amigurumi">
+              <img src="img/manjedoura-480.webp"
+                   srcset="img/manjedoura-480.webp 480w, img/manjedoura-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Manjedoura em amigurumi">
             </div>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">2</span>
-            <div>
-              <span class="passo__titulo">Separe os fios pela lista</span>
-              <p>Você já sabe quais cores e materiais comprar antes de começar.</p>
+            <figcaption>Primeiro, a Sagrada Família</figcaption>
+          </figure>
+          <figure class="etapa" data-reveal>
+            <div class="moldura moldura--grade">
+              <img src="img/peca-04-480.webp"
+                   srcset="img/peca-04-480.webp 480w, img/peca-04-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Melchior em amigurumi">
+              <img src="img/peca-05-480.webp"
+                   srcset="img/peca-05-480.webp 480w, img/peca-05-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Gaspar em amigurumi">
+              <img src="img/peca-06-480.webp"
+                   srcset="img/peca-06-480.webp 480w, img/peca-06-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Baltazar em amigurumi">
+              <img src="img/peca-07-480.webp"
+                   srcset="img/peca-07-480.webp 480w, img/peca-07-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Anjo em amigurumi">
             </div>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">3</span>
-            <div>
-              <span class="passo__titulo">Siga o passo a passo com fotos</span>
-              <p>Cada etapa tem foto, então dá para conferir se o seu trabalho está igual.</p>
+            <figcaption>Depois, os Reis Magos e o Anjo</figcaption>
+          </figure>
+          <figure class="etapa" data-reveal>
+            <div class="moldura moldura--grade">
+              <img src="img/peca-08-480.webp"
+                   srcset="img/peca-08-480.webp 480w, img/peca-08-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Pastor em amigurumi">
+              <img src="img/peca-09-480.webp"
+                   srcset="img/peca-09-480.webp 480w, img/peca-09-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Ovelha em amigurumi">
+              <img src="img/peca-10-480.webp"
+                   srcset="img/peca-10-480.webp 480w, img/peca-10-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Boi em amigurumi">
+              <img src="img/peca-11-480.webp"
+                   srcset="img/peca-11-480.webp 480w, img/peca-11-960.webp 960w"
+                   sizes="(min-width: 1180px) 270px, (min-width: 900px) calc(25vw - 50px), calc(50vw - 35px)"
+                   width="480" height="600" loading="lazy" decoding="async"
+                   alt="Burrinho em amigurumi">
             </div>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">4</span>
-            <div>
-              <span class="passo__titulo">Monte a cena</span>
-              <p>Com as peças prontas, é só arrumar o presépio no lugar de honra da casa.</p>
-            </div>
-          </li>
-        </ol>
+            <figcaption>Por fim, o Pastor e os animais</figcaption>
+          </figure>
+          <p class="aviso-ilustrativo">Imagens ilustrativas.</p>
+        </div>
       </div>
     </section>
 
-    <!-- 5. Galeria das 12 peças -->
-    <section class="secao" id="pecas" aria-labelledby="titulo-pecas">
-      <div class="conteudo">
-        <h2 id="titulo-pecas">As 12 peças do presépio</h2>
-        <p class="secao__intro">Todas as peças que você vai aprender a fazer, com o tamanho de cada uma depois de pronta.</p>
-        <ul class="galeria">
-          <li><figure class="peca"><img src="img/peca-01.webp" width="600" height="600" loading="lazy" alt="Menino Jesus de crochê deitado na manjedoura com palha"><figcaption><span class="peca__nome">Menino Jesus com manjedoura</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-02.webp" width="600" height="600" loading="lazy" alt="Maria de crochê com manto azul e as mãos unidas"><figcaption><span class="peca__nome">Maria</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-03.webp" width="600" height="600" loading="lazy" alt="José de crochê com túnica e cajado"><figcaption><span class="peca__nome">José</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-04.webp" width="600" height="600" loading="lazy" alt="Rei mago Melchior de crochê com coroa e presente"><figcaption><span class="peca__nome">Melchior</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-05.webp" width="600" height="600" loading="lazy" alt="Rei mago Gaspar de crochê com coroa e presente"><figcaption><span class="peca__nome">Gaspar</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-06.webp" width="600" height="600" loading="lazy" alt="Rei mago Baltazar de crochê com coroa e presente"><figcaption><span class="peca__nome">Baltazar</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-07.webp" width="600" height="600" loading="lazy" alt="Anjo de crochê com asas brancas"><figcaption><span class="peca__nome">Anjo</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-08.webp" width="600" height="600" loading="lazy" alt="Pastor de crochê com cajado"><figcaption><span class="peca__nome">Pastor</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-09.webp" width="600" height="600" loading="lazy" alt="Ovelha de crochê com lã branca"><figcaption><span class="peca__nome">Ovelha</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-10.webp" width="600" height="600" loading="lazy" alt="Boi de crochê deitado"><figcaption><span class="peca__nome">Boi</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-11.webp" width="600" height="600" loading="lazy" alt="Burrinho de crochê cinza"><figcaption><span class="peca__nome">Burrinho</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-          <li><figure class="peca"><img src="img/peca-12.webp" width="600" height="600" loading="lazy" alt="Estrela de Belém de crochê dourada"><figcaption><span class="peca__nome">Estrela de Belém</span><span class="peca__tamanho">[X] cm</span></figcaption></figure></li>
-        </ul>
+    <!-- 6. Veja por dentro -->
+    <!-- REATIVAR quando o PDF estiver pronto: exportar 6 páginas como previa-1 a previa-6 em originais/, rodar o script e tirar o hidden -->
+    <section class="painel centro" id="por-dentro" aria-labelledby="titulo-dentro" hidden>
+      <h2 id="titulo-dentro">Veja por dentro <span class="destaque">como é o guia.</span></h2>
+      <div class="mosaico">
+        <figure><img src="img/previa-1-480.webp" srcset="img/previa-1-480.webp 480w, img/previa-1-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia com a lista de compras"><figcaption>Lista de compras</figcaption></figure>
+        <figure><img src="img/previa-2-480.webp" srcset="img/previa-2-480.webp 480w, img/previa-2-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia com os pontos básicos explicados em fotos"><figcaption>Pontos básicos com foto</figcaption></figure>
+        <figure><img src="img/previa-3-480.webp" srcset="img/previa-3-480.webp 480w, img/previa-3-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia com a receita do Menino Jesus"><figcaption>Receita do Menino Jesus</figcaption></figure>
+        <figure><img src="img/previa-4-480.webp" srcset="img/previa-4-480.webp 480w, img/previa-4-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia com fotos das etapas de uma peça"><figcaption>Fotos das etapas</figcaption></figure>
+        <figure><img src="img/previa-5-480.webp" srcset="img/previa-5-480.webp 480w, img/previa-5-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia mostrando a montagem da cena"><figcaption>Montagem da cena</figcaption></figure>
+        <figure><img src="img/previa-6-480.webp" srcset="img/previa-6-480.webp 480w, img/previa-6-960.webp 960w" sizes="(min-width: 768px) 330px, calc(50vw - 40px)" width="480" height="600" loading="lazy" decoding="async" alt="Página do guia com o guia de fios e cores"><figcaption>Guia de fios e cores</figcaption></figure>
       </div>
     </section>
 
     <div class="divisor" aria-hidden="true">
-      <svg class="divisor__fio" width="96" height="24"><use href="#i-fio"/></svg>
-      <svg class="estrela" width="20" height="20"><use href="#i-estrela"/></svg>
-      <svg class="divisor__fio divisor__fio--espelho" width="96" height="24"><use href="#i-fio"/></svg>
+      <svg class="divisor__fio"><use href="#i-fio"/></svg>
+      <span class="selo"><svg width="34" height="34"><use href="#i-estrela"/></svg></span>
+      <svg class="divisor__fio divisor__fio--espelho"><use href="#i-fio"/></svg>
     </div>
-
-    <!-- 6. Veja por dentro do guia -->
-    <section class="secao secao--areia" id="por-dentro" aria-labelledby="titulo-dentro">
-      <div class="conteudo">
-        <h2 id="titulo-dentro">Veja por dentro do guia</h2>
-        <p class="secao__intro">Letra grande, fotos claras e cada etapa no seu lugar.</p>
-        <ul class="previas">
-          <li><img src="img/previa-1.webp" width="600" height="800" loading="lazy" alt="Página interna do guia com a lista de materiais de uma peça"></li>
-          <li><img src="img/previa-2.webp" width="600" height="800" loading="lazy" alt="Página interna do guia com o passo a passo de uma peça e fotos de cada etapa"></li>
-          <li><img src="img/previa-3.webp" width="600" height="800" loading="lazy" alt="Página interna do guia explicando um ponto básico de crochê com fotos"></li>
-          <li><img src="img/previa-4.webp" width="600" height="800" loading="lazy" alt="Página interna do guia mostrando como montar a cena do presépio"></li>
-        </ul>
-      </div>
-    </section>
 
     <!-- 7. Quem está por trás -->
-    <section class="secao quem" id="quem" aria-labelledby="titulo-quem">
-      <div class="conteudo">
-        <svg class="estrela" width="32" height="32" aria-hidden="true"><use href="#i-estrela"/></svg>
-        <h2 id="titulo-quem">Quem está por trás</h2>
-        <p>A Crochêtando nasceu do gosto de fazer com as mãos aquilo que fica para a família. Cada peça deste presépio foi criada, testada e fotografada etapa por etapa para que você consiga chegar ao mesmo resultado na sua casa.</p>
-        <p>[CRÉDITO DA CROCHETEIRA]</p>
+    <section class="painel painel--areia centro" id="quem" aria-labelledby="titulo-quem">
+      <h2 id="titulo-quem" data-reveal>Quem está <span class="destaque">por trás do presépio</span></h2>
+      <p data-reveal>A Crochêtando é uma página feita para quem ama crochê.</p>
+      <!-- ATIVAR depois do teste: "As receitas foram testadas na agulha por [NOMES DAS TESTADORAS] antes de entrar no guia." -->
+
+      <!-- ATIVAR com foto real e autorização por escrito da testadora -->
+      <!--
+      <figure class="testadora">
+        <img src="img/testadora-480.webp"
+             srcset="img/testadora-480.webp 480w, img/testadora-960.webp 960w"
+             sizes="96px" width="480" height="600" loading="lazy" decoding="async"
+             alt="[NOME DA TESTADORA] segurando as peças do presépio">
+        <figcaption>
+          <strong>[NOME DA TESTADORA]</strong>
+          <span>[CIDADE]</span>
+          <span>Testou as receitas do presépio na agulha.</span>
+        </figcaption>
+      </figure>
+      -->
+
+      <ul class="numeros">
+        <li class="numero" data-reveal><strong>8,8 mil</strong><span>seguidores na Crochêtando</span></li>
+        <li class="numero" data-reveal style="--atraso: 120ms"><strong>12</strong><span>peças no presépio completo</span></li>
+        <li class="numero" data-reveal style="--atraso: 240ms"><strong>1</strong><span>guia em PDF, pra celular e impressão</span></li>
+      </ul>
+      <div class="acao">
+        <a class="btn" href="#planos">QUERO MEU PRESÉPIO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
       </div>
     </section>
 
-    <div class="divisor" aria-hidden="true">
-      <svg class="divisor__fio" width="96" height="24"><use href="#i-fio"/></svg>
-      <svg class="estrela" width="20" height="20"><use href="#i-estrela"/></svg>
-      <svg class="divisor__fio divisor__fio--espelho" width="96" height="24"><use href="#i-fio"/></svg>
+    <!-- 8. As 12 peças -->
+    <section class="painel centro pecas-intro" id="pecas" aria-labelledby="titulo-pecas">
+      <h2 id="titulo-pecas" data-reveal>As 12 peças <span class="destaque">do seu presépio.</span></h2>
+      <p data-reveal>Todas as peças que você vai aprender a fazer, uma receita para cada.</p>
+    </section>
+    <div class="faixas">
+      <!-- Celular e tablet: duas fileiras em sentidos opostos -->
+      <div class="faixa faixa--dupla">
+        <div class="faixa__linha">
+          <ul class="faixa__trilho" aria-label="Peças 1 a 6">
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-01-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Menino Jesus em amigurumi"><img class="peca-card__detalhe" src="img/manjedoura-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Manjedoura em amigurumi"></div><figcaption><span class="peca-card__nome">Menino Jesus com manjedoura</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-02-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Maria em amigurumi"></div><figcaption><span class="peca-card__nome">Maria</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-03-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="José em amigurumi"></div><figcaption><span class="peca-card__nome">José</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-04-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Melchior em amigurumi"></div><figcaption><span class="peca-card__nome">Melchior</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-05-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Gaspar em amigurumi"></div><figcaption><span class="peca-card__nome">Gaspar</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-06-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Baltazar em amigurumi"></div><figcaption><span class="peca-card__nome">Baltazar</span><span class="altura"></span></figcaption></figure></li>
+          </ul>
+        </div>
+        <div class="faixa__linha faixa__linha--reversa">
+          <ul class="faixa__trilho" aria-label="Peças 7 a 12">
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-07-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Anjo em amigurumi"></div><figcaption><span class="peca-card__nome">Anjo</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-08-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Pastor em amigurumi"></div><figcaption><span class="peca-card__nome">Pastor</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-09-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Ovelha em amigurumi"></div><figcaption><span class="peca-card__nome">Ovelha</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-10-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Boi em amigurumi"></div><figcaption><span class="peca-card__nome">Boi</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-11-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Burrinho em amigurumi"></div><figcaption><span class="peca-card__nome">Burrinho</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-12-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Estrela de Belém em amigurumi"></div><figcaption><span class="peca-card__nome">Estrela de Belém</span><span class="altura"></span></figcaption></figure></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Desktop: uma fileira com as 12 -->
+      <div class="faixa faixa--unica">
+        <div class="faixa__linha">
+          <ul class="faixa__trilho" aria-label="As 12 peças">
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-01-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Menino Jesus em amigurumi"><img class="peca-card__detalhe" src="img/manjedoura-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Manjedoura em amigurumi"></div><figcaption><span class="peca-card__nome">Menino Jesus com manjedoura</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-02-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Maria em amigurumi"></div><figcaption><span class="peca-card__nome">Maria</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-03-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="José em amigurumi"></div><figcaption><span class="peca-card__nome">José</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-04-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Melchior em amigurumi"></div><figcaption><span class="peca-card__nome">Melchior</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-05-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Gaspar em amigurumi"></div><figcaption><span class="peca-card__nome">Gaspar</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-06-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Baltazar em amigurumi"></div><figcaption><span class="peca-card__nome">Baltazar</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-07-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Anjo em amigurumi"></div><figcaption><span class="peca-card__nome">Anjo</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-08-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Pastor em amigurumi"></div><figcaption><span class="peca-card__nome">Pastor</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-09-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Ovelha em amigurumi"></div><figcaption><span class="peca-card__nome">Ovelha</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-10-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Boi em amigurumi"></div><figcaption><span class="peca-card__nome">Boi</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-11-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Burrinho em amigurumi"></div><figcaption><span class="peca-card__nome">Burrinho</span><span class="altura"></span></figcaption></figure></li>
+            <li class="faixa__item"><figure class="peca-card"><div class="peca-card__foto"><img src="img/peca-12-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Estrela de Belém em amigurumi"></div><figcaption><span class="peca-card__nome">Estrela de Belém</span><span class="altura"></span></figcaption></figure></li>
+          </ul>
+        </div>
+      </div>
+      <p class="aviso-ilustrativo">Imagens ilustrativas.</p>
     </div>
 
-    <!-- 8. O que você recebe -->
-    <section class="secao secao--areia" id="o-que-recebe" aria-labelledby="titulo-recebe">
-      <div class="conteudo">
-        <h2 id="titulo-recebe">O que você recebe</h2>
-        <div class="recebe">
-          <div class="recebe__bloco">
-            <h3>Plano Básico</h3>
-            <ul class="lista">
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Sagrada Família: Menino Jesus com manjedoura, Maria e José (3 peças)</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de pontos</li>
-            </ul>
-          </div>
-          <div class="recebe__bloco">
-            <h3>Plano Completo</h3>
-            <ul class="lista">
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>As 12 peças do presépio</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de montagem da cena</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de fios e cores</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Lista de compras</li>
-            </ul>
-          </div>
-        </div>
+    <!-- 9. O que você recebe + planos -->
+    <section class="painel painel--verde centro" id="planos" aria-labelledby="titulo-planos">
+      <h2 id="titulo-planos">Olha tudo o que <span class="destaque">vem no seu guia:</span></h2>
+      <img class="mockup-planos" src="img/mockup-capa-dura-480.webp"
+           srcset="img/mockup-capa-dura-480.webp 480w, img/mockup-capa-dura-960.webp 960w"
+           sizes="(min-width: 424px) 360px, calc(100vw - 64px)"
+           width="480" height="600" loading="lazy" decoding="async"
+           alt="Guia Presépio Noite Feliz em formato de livro">
+
+      <div class="planos">
+        <!-- Completo vem primeiro no HTML (primeiro no celular). No desktop, o CSS põe o Básico à esquerda. -->
+        <article class="plano plano--completo" aria-labelledby="titulo-plano-completo">
+          <p class="plano__etiqueta">COMPLETO</p>
+          <h3 id="titulo-plano-completo">Presépio Completo</h3>
+          <ul class="lista-check">
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>As 12 peças do presépio</li>
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Guia de montagem da cena</li>
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Guia de fios e cores</li>
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Lista de compras única</li>
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Pontos básicos com foto</li>
+          </ul>
+          <p class="plano__preco"><strong>R$ 27,90</strong><span>pagamento único</span></p>
+          <a class="btn btn--bloco" data-checkout href="{{CHECKOUT_COMPLETO}}">QUERO O COMPLETO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+        </article>
+
+        <article class="plano plano--basico" aria-labelledby="titulo-plano-basico">
+          <h3 id="titulo-plano-basico">Básico</h3>
+          <ul class="lista-check">
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Sagrada Família (3 peças)</li>
+            <li><svg class="ico-check" width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg>Pontos básicos com foto</li>
+          </ul>
+          <p class="plano__preco"><strong>R$ 14,90</strong><span>pagamento único</span></p>
+          <a class="btn btn--bloco" data-checkout href="{{CHECKOUT_BASICO}}">QUERO O BÁSICO<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+        </article>
       </div>
-    </section>
 
-    <!-- 9. Planos -->
-    <section class="secao" id="planos" aria-labelledby="titulo-planos">
-      <div class="conteudo">
-        <h2 id="titulo-planos">Escolha o seu plano</h2>
-        <p class="secao__intro">Pagamento único. Você recebe o guia no seu e-mail.</p>
-
-        <div class="planos">
-          <!-- Completo vem primeiro no HTML (primeiro no celular). No desktop, o CSS coloca o Básico à esquerda. -->
-          <article class="plano plano--completo" aria-labelledby="titulo-plano-completo">
-            <p class="plano__selo">Presépio inteiro</p>
-            <h3 id="titulo-plano-completo">Completo</h3>
-            <p class="plano__preco"><span class="plano__moeda">R$</span>27,90</p>
-            <p class="plano__nota">12 peças</p>
-            <ul class="lista">
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>As 12 peças do presépio</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de montagem</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de fios e cores</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Lista de compras</li>
-            </ul>
-            <a class="botao" data-checkout href="{{CHECKOUT_COMPLETO}}">Quero o Completo</a>
-          </article>
-
-          <article class="plano plano--basico" aria-labelledby="titulo-plano-basico">
-            <h3 id="titulo-plano-basico">Básico</h3>
-            <p class="plano__preco"><span class="plano__moeda">R$</span>14,90</p>
-            <p class="plano__nota">Sagrada Família, 3 peças</p>
-            <ul class="lista">
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Sagrada Família (3 peças)</li>
-              <li><svg class="estrela" width="18" height="18" aria-hidden="true"><use href="#i-estrela"/></svg>Guia de pontos</li>
-            </ul>
-            <a class="botao" data-checkout href="{{CHECKOUT_BASICO}}">Quero o Básico</a>
-          </article>
-        </div>
-
-        <div class="planos__avisos">
-          <p class="aviso"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg><span><strong>Garantia de 7 dias:</strong> se não gostar, peça o reembolso.</span></p>
-          <p class="aviso"><svg class="estrela" width="20" height="20" aria-hidden="true"><use href="#i-estrela"/></svg><span>No app do banco, o recebedor aparece como Cakto.</span></p>
-        </div>
-      </div>
+      <ul class="selos">
+        <li><svg width="28" height="28" aria-hidden="true"><use href="#i-pdf"/></svg>PDF pra celular e impressão</li>
+        <li><svg width="28" height="28" aria-hidden="true"><use href="#i-email"/></svg>Chega no seu e-mail</li>
+        <li><svg width="28" height="28" aria-hidden="true"><use href="#i-escudo"/></svg>Garantia de 7 dias</li>
+      </ul>
+      <p class="nota-banco">No app do banco, o recebedor aparece como Cakto.</p>
     </section>
 
     <!-- 10. Fechamento -->
-    <section class="secao secao--verde fechamento" id="fechamento" aria-labelledby="titulo-fechamento">
-      <div class="conteudo">
-        <svg class="estrela" width="36" height="36" aria-hidden="true"><use href="#i-estrela"/></svg>
-        <h2 id="titulo-fechamento">Um presépio que volta pra sala todo Natal</h2>
-        <p>Feito por você, guardado com carinho e montado de novo a cada dezembro, perto de quem você ama.</p>
-        <a class="botao botao--contorno-dourado" href="#planos">Quero meu presépio</a>
+    <section class="painel centro" id="fechamento" aria-labelledby="titulo-fechamento">
+      <span class="selo selo--topo" aria-hidden="true"><svg width="34" height="34"><use href="#i-estrela"/></svg></span>
+      <h2 id="titulo-fechamento" data-reveal>Este ano, o presépio <span class="destaque">vai ter a sua história.</span></h2>
+      <p data-reveal>Separe os fios, abra o guia no celular e comece pelo Menino Jesus. O resto vem peça por peça.</p>
+      <div class="acao">
+        <a class="btn" href="#planos">QUERO MEU PRESÉPIO NOITE FELIZ<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
       </div>
     </section>
 
+    <div class="divisor" aria-hidden="true">
+      <svg class="divisor__fio"><use href="#i-fio"/></svg>
+      <span class="selo"><svg width="34" height="34"><use href="#i-estrela"/></svg></span>
+      <svg class="divisor__fio divisor__fio--espelho"><use href="#i-fio"/></svg>
+    </div>
+
     <!-- 11. Perguntas frequentes -->
-    <section class="secao secao--areia" id="perguntas" aria-labelledby="titulo-faq">
-      <div class="conteudo">
-        <h2 id="titulo-faq">Perguntas frequentes</h2>
-        <div class="faq">
-          <details>
-            <summary>Preciso saber crochê?</summary>
-            <div class="faq__resposta">
-              <p>Não precisa ser experiente. O guia usa pontos básicos do amigurumi e mostra cada etapa com fotos, então dá para acompanhar no seu ritmo, uma peça de cada vez.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Quais fios uso?</summary>
-            <div class="faq__resposta">
-              <p>[FIOS E AGULHA RECOMENDADOS]. No plano Completo, o guia de fios e cores e a lista de compras mostram exatamente o que comprar para cada peça.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Como recebo o guia?</summary>
-            <div class="faq__resposta">
-              <p>Assim que o pagamento é aprovado, o link do guia chega no e-mail que você informou na compra, em alguns minutos. Se não aparecer, confira a caixa de spam ou escreva para [E-MAIL DE SUPORTE].</p>
-            </div>
-          </details>
-          <details>
-            <summary>Chega alguma peça em casa?</summary>
-            <div class="faq__resposta">
-              <p>Não. É um produto digital: você recebe o guia para fazer as peças. Fios e materiais não estão inclusos.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Posso vender as peças que eu fizer?</summary>
-            <div class="faq__resposta">
-              <p>[REGRA DE VENDA DAS PEÇAS]</p>
-            </div>
-          </details>
-          <details>
-            <summary>Como funciona a garantia?</summary>
-            <div class="faq__resposta">
-              <p>Você tem 7 dias a partir da compra. Se não gostar do guia, peça o reembolso pelo e-mail [E-MAIL DE SUPORTE] e o valor é devolvido.</p>
-            </div>
-          </details>
-        </div>
+    <section class="painel painel--areia" id="perguntas" aria-labelledby="titulo-faq">
+      <h2 id="titulo-faq" class="centro">Ficou com dúvida? <span class="destaque">A gente responde.</span></h2>
+      <div class="faq">
+        <details>
+          <summary>“Mas eu nunca fiz amigurumi. Consigo?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>O guia explica os pontos básicos com foto. Comece pelo Menino Jesus, a peça mais simples. As outras pedem um pouco mais de prática, principalmente na montagem.</p></div>
+        </details>
+        <details>
+          <summary>“Que fio e agulha eu uso?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>Fio 100% algodão para amigurumi, de cerca de 2 mm, e agulha de 2 mm. A lista de compras do guia mostra cada cor e a metragem estimada.</p></div>
+        </details>
+        <details>
+          <summary>“Como eu recebo o guia?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>Depois do pagamento, o link do guia chega no seu e-mail. Você baixa o PDF e abre no celular, no computador ou imprime.</p></div>
+        </details>
+        <details>
+          <summary>“Chega alguma peça na minha casa?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>Não. É um produto digital: você recebe o guia em PDF. Fios e materiais não estão inclusos.</p></div>
+        </details>
+        <details>
+          <summary>“Posso vender as peças que eu fizer?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>[DEFINIR: sim, as peças prontas podem ser vendidas; o PDF não pode ser revendido nem compartilhado.]</p></div>
+        </details>
+        <details>
+          <summary>“E se eu não gostar?”<span class="faq__mais" aria-hidden="true"><svg width="18" height="18"><use href="#i-mais"/></svg></span></summary>
+          <div class="faq__resposta"><p>Você tem 7 dias de garantia. É só pedir o reembolso pelo e-mail de suporte.</p></div>
+        </details>
       </div>
     </section>
 
@@ -330,29 +486,36 @@
 
   <!-- 12. Rodapé -->
   <footer class="rodape">
-    <div class="conteudo">
-      <p class="rodape__marca">Presépio Noite Feliz · por Crochêtando</p>
-      <p>[RAZÃO SOCIAL] · CNPJ [CNPJ] · [ENDEREÇO] · [E-MAIL DE SUPORTE]</p>
-      <nav class="rodape__links" aria-label="Documentos">
-        <a href="termos.html">Termos de uso</a>
-        <a href="privacidade.html">Política de privacidade</a>
-      </nav>
-      <p>Produto digital. Fios e materiais não inclusos.</p>
-    </div>
+    <p class="rodape__marca"><img src="img/logo-noite-feliz-claro-guia.svg" width="614" height="439" loading="lazy" decoding="async" alt="Presépio Noite Feliz"></p>
+    <p>[RAZÃO SOCIAL] · CNPJ [CNPJ] · [ENDEREÇO] · [E-MAIL DE SUPORTE]</p>
+    <nav class="rodape__links" aria-label="Documentos">
+      <a href="termos.html">Termos de uso</a>
+      <a href="privacidade.html">Política de privacidade</a>
+    </nav>
+    <p>Produto digital. Fios e materiais não inclusos.</p>
+    <p class="rodape__copy">© 2026 Presépio Noite Feliz · por Crochêtando</p>
   </footer>
 
   <!-- Botão fixo do celular -->
-  <div class="barra-planos" id="barra-planos">
-    <a class="botao" href="#planos" tabindex="-1">Ver planos</a>
+  <div class="barra-planos" id="barra-planos" aria-hidden="true">
+    <a class="btn" href="#planos" tabindex="-1">VER OS PLANOS<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
   </div>
+
+  <!-- Voltar ao topo -->
+  <button type="button" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo" tabindex="-1">
+    <svg width="22" height="22" aria-hidden="true"><use href="#i-cima"/></svg>
+  </button>
 
   <!-- Pop-up de saída -->
   <div class="popup" id="popup-saida" role="dialog" aria-modal="true" aria-labelledby="popup-titulo" hidden>
     <div class="popup__caixa">
-      <svg class="estrela" width="32" height="32" aria-hidden="true"><use href="#i-estrela"/></svg>
-      <p class="popup__titulo" id="popup-titulo">Espera: leve o Presépio Completo por R$ 19,90.</p>
-      <a class="botao" data-checkout href="{{CHECKOUT_POPUP}}">Quero o Completo por R$ 19,90</a>
-      <button type="button" class="link-texto" data-fechar-popup>Não, obrigada</button>
+      <button type="button" class="popup__fechar" data-fechar-popup aria-label="Fechar">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-fechar"/></svg>
+      </button>
+      <svg class="ico-estrela" width="34" height="34" aria-hidden="true"><use href="#i-estrela"/></svg>
+      <h2 class="popup__titulo" id="popup-titulo">Espera: <span class="destaque">leve o Presépio Completo por R$ 19,90.</span></h2>
+      <a class="btn" data-checkout href="{{CHECKOUT_POPUP}}">QUERO POR R$ 19,90<span class="btn__seta" aria-hidden="true"><svg width="18" height="18"><use href="#i-seta"/></svg></span></a>
+      <div><button type="button" class="link-texto" data-fechar-popup>Não, obrigada</button></div>
     </div>
   </div>
 
