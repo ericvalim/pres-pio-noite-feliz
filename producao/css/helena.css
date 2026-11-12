@@ -1,0 +1,169 @@
+/* Helena: avatar da marca. Layout original da apresentação. */
+
+
+
+
+.helena-cena {
+  margin: 0;
+}
+
+.helena-cena img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--raio-img);
+  box-shadow: var(--sombra-suave);
+}
+
+
+
+.helena-retrato {
+  max-width: 300px;
+  margin: 0 auto 32px;
+}
+
+.helena-retrato img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 382 / 512;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--raio-img);
+  box-shadow: var(--sombra-suave);
+}
+
+
+
+#como-funciona .capa-guia {
+  display: none;
+}
+
+
+.helena-cena--funciona img {
+  object-position: 52% 50%;
+}
+
+
+
+.helena-cena--materiais {
+  max-width: 760px;
+  margin: 36px auto 0;
+}
+
+.helena-cena--materiais img {
+  object-position: 62% 50%;
+}
+
+
+
+
+.helena-final {
+  margin: 0 0 28px;
+}
+
+.helena-final img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 0% 40%;
+  border-radius: var(--raio-img);
+}
+
+
+
+@media (min-width: 768px) {
+  .helena-cena img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .helena-final img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 900px) {
+
+
+  #quem {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    grid-template-rows: 1fr repeat(4, auto) 1fr;
+    column-gap: 64px;
+    text-align: left;
+  }
+
+  #quem > .helena-retrato {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    max-width: none;
+    margin: 0;
+  }
+
+  #quem > :not(.helena-retrato) {
+    grid-column: 2;
+  }
+
+  #quem > h2 { grid-row: 2; }
+  #quem > p { grid-row: 3; }
+  #quem > .numeros { grid-row: 4; }
+  #quem > .acao { grid-row: 5; }
+
+  #quem > p {
+    margin-left: 0;
+  }
+
+  #quem .numeros {
+    margin: 28px 0 0;
+  }
+
+
+  .helena-cena--funciona img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+@media (min-width: 1100px) {
+  #fechamento {
+    display: grid;
+    grid-template-columns: 54% 1fr;
+    align-content: center;
+    aspect-ratio: 1376 / 768;
+    padding: 48px 64px 48px 0;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: left;
+  }
+
+  #fechamento > .helena-final {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: 0;
+  }
+
+  #fechamento > .helena-final img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: 0% 40%;
+    border-radius: 0;
+  }
+
+  #fechamento > :not(.helena-final) {
+    grid-column: 2;
+  }
+
+  #fechamento .selo--topo {
+    margin: 0 0 20px;
+  }
+
+  #fechamento h2 {
+    font-size: clamp(2rem, 1.2rem + 1.6vw, 2.75rem);
+  }
+
+  #fechamento > p {
+    margin-left: 0;
+  }
+}
