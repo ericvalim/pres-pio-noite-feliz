@@ -36,6 +36,7 @@
 
 
   <script src="js/meta-pixel.js" defer></script>
+  <link rel="stylesheet" href="css/previas.css">
 </head>
 <body>
 
@@ -390,6 +391,13 @@
       <p class="texto-curto" style="font-size: 1rem; color: var(--texto-suave)">As vendas e os ganhos dependem da procura, dos custos e da sua produção. Não há garantia de renda.</p>
     </section>
 
+<section class="painel centro guia-previas" id="por-dentro" aria-labelledby="titulo-dentro">
+<h2 id="titulo-dentro">Veja como é o guia <span class="destaque">por dentro</span></h2>
+<p>Conheça algumas páginas do material: receitas em português, contagem de pontos e orientações de montagem para acompanhar seu projeto.</p>
+<p class="guia-deslize">Deslize para ver as páginas <span aria-hidden="true">→</span></p>
+<ul class="guia-trilho" aria-label="Quatro páginas reais do guia"><li class="guia-card"><a class="guia-link" href="img/previas/pontos-1800.webp" data-amostra aria-haspopup="dialog" aria-label="Ampliar: Pontos básicos: anel mágico. Básico e Completo"><img src="img/previas/pontos-360.webp" srcset="img/previas/pontos-360.webp 360w, img/previas/pontos-720.webp 720w" sizes="(min-width: 768px) 25vw, 75vw" width="720" height="900" loading="lazy" decoding="async" alt="Página 9 do guia: Pontos básicos: anel mágico"><span class="guia-badge">Básico e Completo</span><strong>Pontos básicos: anel mágico</strong><span class="guia-toque">Toque para ampliar <span aria-hidden="true">↗</span></span></a></li><li class="guia-card"><a class="guia-link" href="img/previas/receita-1800.webp" data-amostra aria-haspopup="dialog" aria-label="Ampliar: Carreiras e contagem de pontos. Básico e Completo"><img src="img/previas/receita-360.webp" srcset="img/previas/receita-360.webp 360w, img/previas/receita-720.webp 720w" sizes="(min-width: 768px) 25vw, 75vw" width="720" height="900" loading="lazy" decoding="async" alt="Página 25 do guia: Carreiras e contagem de pontos"><span class="guia-badge">Básico e Completo</span><strong>Carreiras e contagem de pontos</strong><span class="guia-toque">Toque para ampliar <span aria-hidden="true">↗</span></span></a></li><li class="guia-card"><a class="guia-link" href="img/previas/montagem-1800.webp" data-amostra aria-haspopup="dialog" aria-label="Ampliar: Montagem da manjedoura. Básico e Completo"><img src="img/previas/montagem-360.webp" srcset="img/previas/montagem-360.webp 360w, img/previas/montagem-720.webp 720w" sizes="(min-width: 768px) 25vw, 75vw" width="720" height="900" loading="lazy" decoding="async" alt="Página 36 do guia: Montagem da manjedoura"><span class="guia-badge">Básico e Completo</span><strong>Montagem da manjedoura</strong><span class="guia-toque">Toque para ampliar <span aria-hidden="true">↗</span></span></a></li><li class="guia-card"><a class="guia-link" href="img/previas/cena-1800.webp" data-amostra aria-haspopup="dialog" aria-label="Ampliar: Organização da cena. Exclusivo do Completo"><img src="img/previas/cena-360.webp" srcset="img/previas/cena-360.webp 360w, img/previas/cena-720.webp 720w" sizes="(min-width: 768px) 25vw, 75vw" width="720" height="900" loading="lazy" decoding="async" alt="Página 211 do guia: Organização da cena"><span class="guia-badge">Exclusivo do Completo</span><strong>Organização da cena</strong><span class="guia-toque">Toque para ampliar <span aria-hidden="true">↗</span></span></a></li></ul>
+<p class="guia-nota">Prévia de páginas reais do guia digital. O conteúdo recebido depende da versão escolhida.</p>
+</section>
     <section class="painel painel--verde centro" id="planos" aria-labelledby="titulo-planos">
       <h2 id="titulo-planos">Olha tudo o que <span class="destaque">vem no seu guia:</span></h2>
       <img class="mockup-planos" src="img/mockup-capa-dura-480.webp"
@@ -546,5 +554,10 @@
   <script src="js/ofertas.js" defer></script>
 
 
+<dialog class="guia-modal" aria-labelledby="guia-modal-titulo">
+<div class="guia-toolbar"><h2 id="guia-modal-titulo">Página do guia</h2><button type="button" data-guia-zoom aria-pressed="false">Ampliar +</button><button type="button" data-guia-fechar aria-label="Fechar ampliação">Fechar ×</button></div>
+<div class="guia-viewport" tabindex="0" role="region" aria-label="Página ampliada; use as setas para rolar"><img alt=""></div>
+</dialog>
+<script src="js/previas.js" defer></script>
 </body>
 </html>
