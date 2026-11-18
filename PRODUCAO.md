@@ -29,15 +29,18 @@ A pasta de produção contém `index.html`, `termos.html`, `privacidade.html`, `
 O guia passou a ser apresentado como **revista digital em PDF**, com bônus de páginas para colorir. Mudanças aplicadas em `producao/` e `public/`:
 
 - **Capa:** o mockup de livro foi trocado por `img/previas/capa-completo` (480/960) no hero e nos planos, com moldura de revista (classe `.capa-revista` em `previas.css`: cantos de 8 px, sombra suave, inclinação de −2°). Alt: "Capa da revista digital Presépio Noite Feliz — Edição Completa". O preload do hero aponta para a capa nova.
-- **Prévias ("Veja por dentro da revista"):** 5 páginas reais, sem número de página, em carrossel no celular e 5 colunas no desktop:
-  - `nesta-edicao` — Índice com as 12 peças (Completo)
-  - `abertura-maria` — Cada peça abre com foto e a sua história (Básico e Completo)
-  - `receita-maria` — Receita carreira por carreira, com contagem de pontos e caixinhas para marcar (Básico e Completo)
-  - `passo-a-passo-manjedoura` — Montagem com fotos das etapas (Básico e Completo)
-  - `colorir-reis` — Bônus exclusivo do Completo: páginas para colorir com os netos
+- **Prévias ("Veja por dentro da revista"):** 8 páginas reais, sem número de página nas legendas, em carrossel no celular e 4 colunas (2 fileiras de 4) no desktop. Ordem, legenda e selo:
+  1. `nesta-edicao` — Índice com as 12 peças (Completo)
+  2. `lista-de-compras` — Lista de compras com cores e metragens, pronta para marcar (Básico e Completo)
+  3. `pontos-basicos` — Pontos básicos explicados com fotos, passo a passo (Básico e Completo)
+  4. `abertura-maria` — Cada peça abre com foto e a sua história (Básico e Completo)
+  5. `receita-maria` — Receita carreira por carreira, com contagem de pontos e caixinhas para marcar (Básico e Completo)
+  6. `passo-a-passo-manjedoura` — Montagem com fotos das etapas (Básico e Completo)
+  7. `montagem-cena` — Montagem da cena: um lugar para cada peça (Completo) (Exclusivo do Completo)
+  8. `colorir-reis` — Bônus exclusivo do Completo: páginas para colorir com os netos (Exclusivo do Completo)
 
-  O aviso abaixo das prévias diz que as imagens das peças são ilustrativas e que o conteúdo depende da versão escolhida. As imagens ficam em `img/previas/` (480 e 960 px). As prévias antigas (`pontos`, `receita`, `montagem`, `cena`, com as páginas 9, 25, 36 e 211) foram removidas e continuam no histórico do git. Origem dos arquivos: `_fora-do-site/img/previas/` (`capa-basico` não é usada).
-- **Ampliar:** o toque abre a página na versão 960 px. O botão Ampliar vai até 960 px (`.guia-viewport.is-zoom img`), o maior tamanho disponível. Para uma ampliação maior e nítida, gere versões de 1800 px a partir dos originais da revista.
+  O alt de cada imagem é "Página da revista Presépio Noite Feliz: " + a legenda. O aviso abaixo das prévias diz que as imagens das peças são ilustrativas e que o conteúdo depende da versão escolhida. As imagens ficam em `img/previas/`: todas em 480 e 960 px, e `lista-de-compras`, `pontos-basicos` e `montagem-cena` também em 1800 px. As prévias antigas (`pontos`, `receita`, `montagem`, `cena`, com as páginas 9, 25, 36 e 211) foram removidas e continuam no histórico do git. Origem dos arquivos: `_fora-do-site/img/previas/` (`capa-basico` não é usada).
+- **Ampliar:** o toque abre a maior versão de cada página: 1800 px nas 3 prévias que têm esse tamanho e 960 px nas outras 5. O botão Ampliar mostra a imagem no tamanho natural (`.guia-viewport.is-zoom img{width:auto}`), sem esticar. Para ampliar as outras 5 com nitidez, gere versões de 1800 px a partir dos originais da revista e aponte o `href` do card para elas.
 - **Planos:**
   - Completo: "BÔNUS: 3 páginas para colorir com os netos", logo depois das 12 peças, com o selo dourado "EXCLUSIVO DO COMPLETO" (`.selo-exclusivo` em `previas.css`).
   - Básico inclui: Sagrada Família (Menino Jesus com manjedoura, Maria e José), pontos básicos com foto, lista de compras das 3 peças, montagem da Sagrada Família e guia de fios e cores das 3 peças.
@@ -90,8 +93,8 @@ Os marcadores foram retirados da versão pública, mas os dados desconhecidos n�
 
 ### Validação da revista digital
 
-- `node tools/conferir-revista.mjs producao` (ou `public`): servidor local e Chrome headless em 390 e 1366 px. Confere as 7 imagens de `img/previas/`, a ausência de rolagem horizontal, os 4 links da Cakto, as 5 prévias, a ausência de "página N" no texto e nos alts, e a ampliação com a imagem de 960 px. As capturas ficam em `_fora-do-site/revista-conferencia/<pasta>/`.
-- `node tools/conferir-publicado-celular.mjs`: testa o site publicado num Chrome emulando celular (390×844, densidade 3x, toque), com o Pixel bloqueado e sem clicar em checkout. Confere as imagens, a largura, o carrossel, a ampliação, os planos (selo exclusivo, sem "1 página para colorir"), a FAQ e o rodapé. As capturas ficam em `_fora-do-site/revista-conferencia/publicado/`. O único erro de JS esperado é o do Pixel bloqueado.
+- `node tools/conferir-revista.mjs producao` (ou `public`): servidor local e Chrome headless em 390 e 1366 px. Confere as 10 imagens de `img/previas/` na página (8 prévias e a capa em 2 lugares), a ausência de rolagem horizontal, os 4 links da Cakto, as 8 prévias, a ausência de "página N" no texto e nos alts, e a ampliação de `pontos-basicos` com a imagem de 1800 px. As capturas ficam em `_fora-do-site/revista-conferencia/<pasta>/`.
+- `node tools/conferir-publicado-celular.mjs`: testa o site publicado num Chrome emulando celular (390×844, densidade 3x, toque), com o Pixel bloqueado e sem clicar em checkout. Confere as imagens, a largura, o carrossel com 8 prévias, a ampliação (abre `pontos-basicos` em 1800 px reais), os planos (selo exclusivo, sem "1 página para colorir"), a FAQ e o rodapé. As capturas ficam em `_fora-do-site/revista-conferencia/publicado/`. O único erro de JS esperado é o do Pixel bloqueado.
 - Testes desatualizados: `tools/testar-previas.mjs` e `tools/conferir-previas-publicadas.mjs` ainda esperam as 4 prévias antigas e falham.
 
 ## Controle da campanha
