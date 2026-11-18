@@ -40,6 +40,7 @@ const modal=await page.locator('.guia-modal').evaluate(m=>({aberto:m.open,titulo
 console.log('ampliação:',JSON.stringify(modal));
 await page.screenshot({path:`${out}/04-ampliacao.png`});
 await page.locator('[data-guia-zoom]').tap();await page.waitForTimeout(400);
+const zoomW=await page.locator('.guia-viewport img').evaluate(async i=>{await new Promise(r=>i.complete?r():i.onload=r);return [i.naturalWidth,Math.round(i.getBoundingClientRect().width)]});console.log('zoom (natural/exibida):',zoomW.join('/'));assert.equal(zoomW[0],1800);assert(zoomW[1]>=1790,'zoom não usa 1800');
 await page.screenshot({path:`${out}/05-ampliacao-zoom.png`});
 await page.locator('[data-guia-fechar]').tap();await page.waitForTimeout(500);
 console.log('fechou:',!(await page.locator('.guia-modal').evaluate(m=>m.open)));
@@ -57,5 +58,6 @@ console.log('erros JS:',JSON.stringify(erros));
 console.log('respostas com erro:',JSON.stringify(falhas));
 assert.equal(quebradas.length,0);assert(sw[0]<=sw[1]);assert(modal.aberto);assert.equal(falhas.length,0);
 const txt=await page.evaluate(()=>document.body.innerText);assert(!/1 p[áa]gina para colorir/i.test(txt),'menção a 1 página para colorir');assert(/EXCLUSIVO DO COMPLETO/i.test(await page.locator('.plano--completo').innerText()),'selo exclusivo ausente');assert(/p[áa]ginas para colorir/.test(await page.locator('.plano--basico .lista-nao').innerText()),'não inclui sem colorir');
+assert.equal(await page.locator('#por-dentro [data-amostra]').count(),8);assert.equal(prev.length,8);
 console.log('RESULTADO: ok');
 await browser.close();

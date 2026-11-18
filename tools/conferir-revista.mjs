@@ -23,13 +23,13 @@ for(const width of [390,1366]){
   for(const c of await page.locator('.guia-card').all()){await c.scrollIntoViewIfNeeded();await page.waitForTimeout(150);}
   await page.waitForTimeout(500);
   const imgs=await page.$$eval('img[src*="previas/"]',a=>Promise.all(a.map(async i=>{try{await Promise.race([i.decode(),new Promise(r=>setTimeout(r,3000))])}catch{};return {src:i.currentSrc,ok:i.naturalWidth>0}})));
-  console.log('imgs');assert.equal(imgs.length,7);assert(imgs.every(i=>i.ok),JSON.stringify(imgs));
+  console.log('imgs');assert.equal(imgs.length,10);assert(imgs.every(i=>i.ok),JSON.stringify(imgs));
   const sw=await page.evaluate(()=>({sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth}));
   assert(sw.sw<=sw.cw,`rolagem horizontal ${JSON.stringify(sw)}`);
   const links=await page.$$eval('a[data-checkout]',a=>a.map(x=>x.getAttribute('href')));
   assert.deepEqual(links,esperado);
   assert.deepEqual(falhas,[]);
-  assert.equal(await page.locator('#por-dentro [data-amostra]').count(),5);
+  assert.equal(await page.locator('#por-dentro [data-amostra]').count(),8);
   assert.equal(await page.evaluate(()=>/p[áa]gina [0-9]/i.test(document.body.innerText+[...document.images].map(i=>i.alt).join(' '))),false);
   await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(300);
   await page.locator('#inicio').screenshot({path:`${out}/hero-${width}.png`});
@@ -37,7 +37,7 @@ for(const width of [390,1366]){
   await page.locator('footer').screenshot({path:`${out}/rodape-${width}.png`});
   await page.locator('#por-dentro [data-amostra]').nth(2).click();await page.waitForTimeout(400);
   assert(await page.locator('.guia-modal').evaluate(m=>m.open));
-  assert(await page.locator('.guia-viewport img').evaluate(async i=>{await new Promise(r=>i.complete?r():i.onload=r);return i.naturalWidth===960}));
+  assert(await page.locator('.guia-viewport img').evaluate(async i=>{await new Promise(r=>i.complete?r():i.onload=r);return i.naturalWidth===1800}));
   await page.screenshot({path:`${out}/modal-${width}.png`});
   console.log(width,'ok',sw,imgs.map(i=>i.src.split('/').pop()).join(' '));
   await page.close();
