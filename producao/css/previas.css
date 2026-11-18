@@ -21,7 +21,7 @@
 .guia-toolbar button{font:700 .8rem var(--fonte-texto);background:var(--verde);color:var(--creme);border:0;border-radius:6px;padding:10px;cursor:pointer;flex-shrink:0;}
 .guia-viewport {overflow:auto;height:calc(100% - 78px);padding:12px;overscroll-behavior:contain;}
 .guia-viewport img {width:100%;max-width:900px;height:auto;margin:auto;}
-.guia-viewport.is-zoom img{width:1440px;max-width:none;margin:0;}
+.guia-viewport.is-zoom img{width:960px;max-width:none;margin:0;}
 @media(prefers-reduced-motion:reduce){.guia-card.guia-revelar{animation:none;}.guia-link,.guia-modal{transition:none;transform:none;} .guia-trilho{scroll-behavior:auto;}}
 /* Capa da revista digital: cantos levemente arredondados, sombra suave, leve inclinação */
 .capa-revista{border-radius:8px;border:1px solid #c9a54c40;box-shadow:0 18px 38px #0c241c38,0 4px 10px #0c241c22;transform:rotate(-2deg);}
