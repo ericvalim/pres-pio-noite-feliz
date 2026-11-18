@@ -951,6 +951,51 @@ html.js [data-reveal].is-revelado {
   color: var(--verde);
 }
 
+.plano__cabeca {
+  text-align: center;
+}
+
+/* Etiqueta pequena acima do título (card Básico) */
+.plano__rotulo {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 3px 14px;
+  border: 1px solid var(--dourado-40);
+  border-radius: 999px;
+  background: var(--creme);
+  color: var(--verde);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.plano__itens {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+/* Itens que o plano não leva: discretos, sem riscar */
+.lista-nao {
+  margin-top: 8px;
+  color: var(--texto-suave);
+}
+
+.ico-nao {
+  flex: 0 0 auto;
+  color: var(--texto-suave);
+}
+
+.plano__faixa {
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--verde);
+  color: var(--creme);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .lista-check {
   list-style: none;
   margin: 0;
@@ -984,6 +1029,12 @@ html.js [data-reveal].is-revelado {
   margin-top: 6px;
   font-size: 0.9375rem;
   color: var(--texto-suave);
+}
+
+.plano__preco .plano__por-peca {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--verde);
 }
 
 .selos {
@@ -1389,6 +1440,32 @@ body.sem-topo {
   /* No desktop o Básico fica à esquerda; no celular o Completo vem primeiro. */
   .plano--basico {
     order: -1;
+  }
+
+  /* Os dois cards dividem as mesmas 5 linhas (título, itens, preço, faixa e botão),
+     então preço e botão ficam na mesma altura. Sem subgrid, vale o flex acima. */
+  @supports (grid-template-rows: subgrid) {
+    .planos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 32px;
+    }
+
+    .plano {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: 1 / span 5;
+      row-gap: 18px;
+    }
+
+    .plano--basico { grid-column: 1; }
+    .plano--completo { grid-column: 2; }
+
+    .plano__cabeca { grid-row: 1; align-self: end; }
+    .plano__itens  { grid-row: 2; }
+    .plano__preco  { grid-row: 3; align-self: end; }
+    .plano__faixa  { grid-row: 4; align-self: end; }
+    .plano > .btn  { grid-row: 5; }
   }
 }
 

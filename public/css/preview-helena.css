@@ -1,0 +1,170 @@
+/* PREVIEW HELENA · só carrega com ?preview=helena (ver <head> do index.html).
+   Todas as regras ficam sob html.preview-helena, então não afetam outras páginas. */
+
+/* ---------- Comuns ---------- */
+
+.preview-helena .helena-cena {
+  margin: 0;
+}
+
+.preview-helena .helena-cena img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--raio-img);
+  box-shadow: var(--sombra-suave);
+}
+
+/* ---------- Seção "Quem está por trás": retrato + nome ---------- */
+
+.preview-helena .helena-retrato {
+  max-width: 300px;
+  margin: 0 auto 32px;
+}
+
+.preview-helena .helena-retrato img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 382 / 512;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--raio-img);
+  box-shadow: var(--sombra-suave);
+}
+
+/* ---------- Como funciona: cena no lugar da capa ---------- */
+
+.preview-helena #como-funciona .capa-guia {
+  display: none;
+}
+
+/* Recorte 4:3 com o caderno, as mãos, o rosto e o novelo. */
+.preview-helena .helena-cena--funciona img {
+  object-position: 52% 50%;
+}
+
+/* ---------- Opção materiais (&variante=materiais) ---------- */
+
+.preview-helena .helena-cena--materiais {
+  max-width: 760px;
+  margin: 36px auto 0;
+}
+
+.preview-helena .helena-cena--materiais img {
+  object-position: 62% 50%;
+}
+
+/* ---------- Chamada final ---------- */
+
+/* Celular e tablet: foto em cima, texto e botão embaixo, fora da foto. */
+.preview-helena .helena-final {
+  margin: 0 0 28px;
+}
+
+.preview-helena .helena-final img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 0% 40%; /* lado esquerdo: Helena */
+  border-radius: var(--raio-img);
+}
+
+/* ---------- Desktop ---------- */
+
+@media (min-width: 768px) {
+  .preview-helena .helena-cena img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .preview-helena .helena-final img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 900px) {
+  /* Quem está por trás: retrato à esquerda, texto à direita. */
+  /* Linhas 1 e 6 absorvem a sobra, e o texto fica agrupado no meio da altura do retrato. */
+  .preview-helena #quem {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    grid-template-rows: 1fr repeat(4, auto) 1fr;
+    column-gap: 64px;
+    text-align: left;
+  }
+
+  .preview-helena #quem > .helena-retrato {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    max-width: none;
+    margin: 0;
+  }
+
+  .preview-helena #quem > :not(.helena-retrato) {
+    grid-column: 2;
+  }
+
+  .preview-helena #quem > h2 { grid-row: 2; }
+  .preview-helena #quem > p { grid-row: 3; }
+  .preview-helena #quem > .numeros { grid-row: 4; }
+  .preview-helena #quem > .acao { grid-row: 5; }
+
+  .preview-helena #quem > p {
+    margin-left: 0;
+  }
+
+  .preview-helena #quem .numeros {
+    margin: 28px 0 0;
+  }
+
+  /* Como funciona: recorte quadrado na coluna da direita. */
+  .preview-helena .helena-cena--funciona img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Chamada final com o texto sobre a área livre da foto.
+   Só a partir de 1100px: abaixo disso a foto ficaria por baixo do texto. */
+@media (min-width: 1100px) {
+  .preview-helena #fechamento {
+    display: grid;
+    grid-template-columns: 54% 1fr; /* a Helena ocupa até ~48% da largura da foto */
+    align-content: center;
+    aspect-ratio: 1376 / 768;
+    padding: 48px 64px 48px 0;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: left;
+  }
+
+  .preview-helena #fechamento > .helena-final {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: 0;
+  }
+
+  .preview-helena #fechamento > .helena-final img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: 0% 40%;
+    border-radius: 0;
+  }
+
+  .preview-helena #fechamento > :not(.helena-final) {
+    grid-column: 2;
+  }
+
+  .preview-helena #fechamento .selo--topo {
+    margin: 0 0 20px;
+  }
+
+  .preview-helena #fechamento h2 {
+    font-size: clamp(2rem, 1.2rem + 1.6vw, 2.75rem);
+  }
+
+  .preview-helena #fechamento > p {
+    margin-left: 0;
+  }
+}

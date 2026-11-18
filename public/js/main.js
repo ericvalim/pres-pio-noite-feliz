@@ -4,7 +4,6 @@
    2. Header, botão fixo do celular, barra de progresso, voltar ao topo
    3. Animação de entrada [data-reveal]
    4. Faixa das 12 peças
-   5. Pop-up de saída (uma vez por sessão)
    Cada parte só roda se os elementos existirem na página.
    ========================================================== */
 (function () {
@@ -25,6 +24,8 @@
     if (typeof URLSearchParams === 'undefined') return;
 
     var daPagina = new URLSearchParams(window.location.search);
+    // Parâmetros de prévia da página não vão para o checkout.
+    var NAO_REPASSAR = { preview: true, variante: true };
 
     cada(doc.querySelectorAll('a[data-checkout]'), function (link) {
       var href = link.getAttribute('href') || '';
@@ -42,7 +43,7 @@
 
       var acrescentou = false;
       daPagina.forEach(function (valor, chave) {
-        if (!chavesDoLink[chave]) {
+        if (!chavesDoLink[chave] && !NAO_REPASSAR[chave]) {
           doLink.append(chave, valor);
           acrescentou = true;
         }
@@ -61,7 +62,6 @@
   var barra = doc.getElementById('barra-planos');
   var progresso = doc.querySelector('.progresso__barra');
   var voltar = doc.getElementById('voltar-topo');
-  var popup = doc.getElementById('popup-saida');
 
   var estado = { heroPassou: false, planosVisivel: false, viuPlanos: false, popupAberto: false };
 
@@ -77,6 +77,9 @@
     if (topo) topo.classList.toggle('is-escondido', estado.planosVisivel);
     mostrar(barra, estado.heroPassou && !estado.planosVisivel && !estado.popupAberto);
   }
+
+  doc.addEventListener('pnf:modal-aberto', function () { estado.popupAberto = true; atualizarFixos(); });
+  doc.addEventListener('pnf:modal-fechado', function () { estado.popupAberto = false; atualizarFixos(); });
 
   if (temIO) {
     if (hero) {
@@ -98,9 +101,8 @@
     }
   }
 
-  // Rolagem: barra de progresso, voltar ao topo e subida rápida (pop-up no celular).
+  // Rolagem: barra de progresso e voltar ao topo.
   var quadroAgendado = false;
-  var aoSubirRapido = null; // definido na parte 5
 
   function quadro() {
     quadroAgendado = false;
@@ -113,7 +115,6 @@
       progresso.style.transform = 'scaleX(' + fracao.toFixed(4) + ')';
     }
     if (voltar) mostrar(voltar, y > altura * 2);
-    if (aoSubirRapido) aoSubirRapido(y);
   }
 
   function agendarQuadro() {
@@ -206,109 +207,4 @@
     });
   }
 
-  /* ---------- 5. Pop-up de saída ---------- */
-  if (!popup) return;
-
-  var CHAVE_POPUP = 'pnf_popup_saida_visto';
-  var vistoNaMemoria = false;
-
-  function popupJaVisto() {
-    if (vistoNaMemoria) return true;
-    try {
-      return window.sessionStorage.getItem(CHAVE_POPUP) === '1';
-    } catch (e) {
-      return false;
-    }
-  }
-
-  function marcarPopupVisto() {
-    vistoNaMemoria = true;
-    try {
-      window.sessionStorage.setItem(CHAVE_POPUP, '1');
-    } catch (e) { /* navegação privada ou armazenamento bloqueado */ }
-  }
-
-  var focoAnterior = null;
-  var carregouEm = Date.now();
-  var ESPERA_MINIMA_MS = 3000; // não abre logo que a página carrega
-
-  function focaveis() {
-    return popup.querySelectorAll('a[href], button:not([disabled])');
-  }
-
-  function abrirPopup() {
-    if (estado.popupAberto || popupJaVisto()) return;
-    if (Date.now() - carregouEm < ESPERA_MINIMA_MS) return;
-
-    marcarPopupVisto();
-    estado.popupAberto = true;
-    focoAnterior = doc.activeElement;
-    popup.hidden = false;
-    doc.body.classList.add('sem-rolagem');
-    atualizarFixos();
-
-    var botao = popup.querySelector('[data-checkout]') || focaveis()[0];
-    if (botao) botao.focus();
-  }
-
-  function fecharPopup() {
-    if (!estado.popupAberto) return;
-    estado.popupAberto = false;
-    popup.hidden = true;
-    doc.body.classList.remove('sem-rolagem');
-    atualizarFixos();
-    if (focoAnterior && typeof focoAnterior.focus === 'function') focoAnterior.focus();
-  }
-
-  // Fecha com o X, com "Não, obrigada", com clique fora e com Esc.
-  popup.addEventListener('click', function (e) {
-    if (e.target === popup || e.target.closest('[data-fechar-popup]')) fecharPopup();
-  });
-
-  doc.addEventListener('keydown', function (e) {
-    if (!estado.popupAberto) return;
-    if (e.key === 'Escape') {
-      fecharPopup();
-      return;
-    }
-    if (e.key === 'Tab') {
-      var itens = focaveis();
-      if (!itens.length) return;
-      var primeiro = itens[0];
-      var ultimo = itens[itens.length - 1];
-      if (e.shiftKey && doc.activeElement === primeiro) {
-        e.preventDefault();
-        ultimo.focus();
-      } else if (!e.shiftKey && doc.activeElement === ultimo) {
-        e.preventDefault();
-        primeiro.focus();
-      }
-    }
-  });
-
-  var temMouse = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
-
-  if (temMouse) {
-    // Desktop: mouse sai da janela pelo topo.
-    doc.addEventListener('mouseout', function (e) {
-      if (!e.relatedTarget && e.clientY <= 0) abrirPopup();
-    });
-  } else {
-    // Celular: já viu #planos e rolou rápido para cima.
-    var JANELA_MS = 100;     // mede a velocidade a cada ~100 ms
-    var VELOCIDADE_MIN = 2;  // px por ms (200 px em 100 ms)
-    var DISTANCIA_MIN = 150; // px subidos na janela
-    var refY = window.pageYOffset;
-    var refT = Date.now();
-
-    aoSubirRapido = function (y) {
-      var t = Date.now();
-      var dt = t - refT;
-      if (dt < JANELA_MS) return;
-      var subiu = refY - y;
-      if (estado.viuPlanos && subiu >= DISTANCIA_MIN && subiu / dt >= VELOCIDADE_MIN) abrirPopup();
-      refY = y;
-      refT = t;
-    };
-  }
 })();
