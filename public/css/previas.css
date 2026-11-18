@@ -25,3 +25,5 @@
 @media(prefers-reduced-motion:reduce){.guia-card.guia-revelar{animation:none;}.guia-link,.guia-modal{transition:none;transform:none;} .guia-trilho{scroll-behavior:auto;}}
 /* Capa da revista digital: cantos levemente arredondados, sombra suave, leve inclinação */
 .capa-revista{border-radius:8px;border:1px solid #c9a54c40;box-shadow:0 18px 38px #0c241c38,0 4px 10px #0c241c22;transform:rotate(-2deg);}
+/* Selo dourado do bonus exclusivo do Completo */
+.selo-exclusivo{display:inline-block;margin:4px 0 0 4px;padding:2px 10px;border-radius:999px;background:var(--dourado);color:var(--verde);font-size:.72rem;font-weight:700;letter-spacing:.06em;line-height:1.5;text-transform:uppercase;vertical-align:middle;white-space:nowrap;}
