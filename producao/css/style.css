@@ -1129,7 +1129,7 @@ html.js [data-reveal].is-revelado {
 
 .rodape {
   margin-top: 12px;
-  padding: 48px 20px 120px; /* espaço para o botão fixo no celular */
+  padding: 48px 20px 176px; /* espaço para a barra fixa e o voltar ao topo no celular */
   background: var(--verde);
   color: var(--creme);
   font-size: 1rem;
