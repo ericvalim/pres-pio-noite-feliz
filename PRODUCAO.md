@@ -65,7 +65,7 @@ Fontes de trabalho em `public/` e PDFs em `pdf/`, fora de `producao/`. O HTML e 
 - Básico: R$ 14,90 — https://pay.cakto.com.br/5cvwvfi_1309610
 - Completo regular no card: R$ 27,90 — https://pay.cakto.com.br/ge3iskx_1309623
 - Completo Black Friday, apenas no modal: R$ 19,90 — https://pay.cakto.com.br/xhysbvp
-- Suporte: timing.agenciadigital@gmail.com
+- Suporte: suporte@ateliecrochetando.com.br
 - Domínio previsto: https://ateliecrochetando.com.br/
 - Pixel: 2573332176467688, com uma inicialização e um PageView por documento e proteção contra execução repetida. Nenhum Purchase é disparado pelo site.
 

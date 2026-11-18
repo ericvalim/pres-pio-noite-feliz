@@ -24,7 +24,7 @@ Abra `http://127.0.0.1:8000/`. Encerre com Ctrl+C. Sirva apenas `public/`, nunca
 
 - Básico: R$ 14,90 — https://pay.cakto.com.br/5cvwvfi_1309610
 - Completo, incluindo o pop-up de saída: R$ 27,90 — https://pay.cakto.com.br/ge3iskx_1309623
-- Suporte: timing.agenciadigital@gmail.com
+- Suporte: suporte@ateliecrochetando.com.br
 - Domínio previsto: https://ateliecrochetando.com.br/
 - Pixel: `2573332176467688`, somente na página principal, com uma inicialização e um `PageView` por documento. Há proteção contra execução repetida do arquivo. Não adicionar outra instalação manual ou via gerenciador de tags na mesma página.
 - Nenhum evento `Purchase` é emitido pelo site, nem na página de agradecimento. A mensuração de compras aprovadas deve ser conferida na integração da Cakto.
